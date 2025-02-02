@@ -21,7 +21,7 @@ class TodosPage extends ConsumerWidget {
             child: ListView(
               children: [
                 for (final todo in todos)
-                  CheckboxListTile.adaptive(
+                  CheckboxListTile(
                     value: todo.completed,
                     onChanged: (value) {
                       ref.watch(todosProvider.notifier).toggleTodo(todo.id);
